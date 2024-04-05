@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.nav1 {
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px -2px black;
+  overflow: hidden;
+}
+
+.nav1 ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.nav1 .img {
+  width: 120px;
+}
+
+.nav1 .elem {
+  display: flex;
+  align-items: center;
+}
+
+.nav1 p {
+  margin: 0 10px;
+  color: black;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.nav1 .search {
+  display: flex;
+  align-items: center;
+}
+
+.nav1 .search input {
+  font-size: 15px;
+  padding: 12px 10px;
+  color: black;
+  border: none;
+  outline: none;
+}
+
+.nav1 .auth {
+  display: flex;
+  align-items: center;
+}
+
+.nav1 .btn1,
+.nav1 .btn2 {
+  font-size: 16px;
+  border: 2px solid #078edd;
+  border-radius: 2px;
+  padding: 5px 15px;
+  cursor: pointer;
+}
+
+.nav1 .btn1 {
+  color: #078edd;
+  margin-right: 10px;
+}
+
+.nav1 .btn2 {
+  color: white;
+  background-color: #078edd;
+}
+
+.nav1 .hire {
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.nav1 .admin button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #078edd;
+}
+
+.btn3 {
+  font-size: 16px;
+  border: 2px solid #078edd;
+  border-radius: 2px;
+  padding: 5px 15px;
+  cursor: pointer;
+  color: white;
+  background-color: #078edd;
+}
+
+.cross {
+  position: absolute;
+  left: 34%;
+  font-size: 34px;
+}
+
+.login {
+  box-shadow: 0px 0px 5px -2px black;
+}
