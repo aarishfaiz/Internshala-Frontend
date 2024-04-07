@@ -18,7 +18,7 @@ const AdminLogin = () => {
       };
       axios
         .post(
-          "https://intern-backend-fop1.onrender.com/api/admin/adminlogin",
+          "https://internshala-clone-backend.onrender.com/api/admin/adminlogin",
           bodyjosn
         )
         .then((res) => {
