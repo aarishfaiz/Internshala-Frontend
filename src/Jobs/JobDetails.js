@@ -1,16 +1,39 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import internshipData from "../ShowInternshipAndJob/JobData/JobData";
 import { useSelector } from "react-redux";
 import { selectUser } from "../features/UserSlice";
 import axios from "axios";
 
 const JobDetails = () => {
+
+  const [internships, setInternships] = useState([]);
+  const [filteredInternships, setFilteredInternships] = useState([]);
+
+
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredData, setFilteredData] = useState(internshipData);
   const [selectedInternship, setSelectedInternship] = useState(null);
   const [coverLetter, setCoverLetter] = useState("");
   const [showPopup, setShowPopup] = useState(false);
   const user = useSelector(selectUser);
+
+  useEffect(() => {
+    // Fetch internships from API
+    const fetchInternships = async () => {
+      try {
+        const response = await axios.get(
+          "https://intern-backend-fop1.onrender.com/api/job"
+          // "http://localhost:5000/api/job"
+        );
+        setInternships(response.data); // Assuming response.data is an array of internships
+        setFilteredInternships(response.data); // Set filtered internships initially
+      } catch (error) {
+        console.error("Error fetching internships:", error);
+      }
+    };
+
+    fetchInternships();
+  }, []);
 
   const applyInternship = async () => {
     try {
@@ -50,14 +73,14 @@ const JobDetails = () => {
 
   const handleSearch = (e) => {
     setSearchTerm(e.target.value);
-    const filtered = internshipData.filter((item) => {
+    const filtered = internships.filter((item) => {
       return (
         item.title.toLowerCase().includes(e.target.value.toLowerCase()) ||
         item.company.toLowerCase().includes(e.target.value.toLowerCase()) ||
         item.location.toLowerCase().includes(e.target.value.toLowerCase())
       );
     });
-    setFilteredData(filtered);
+    setFilteredInternships(filtered);
   };
   return (
     <div>
@@ -70,7 +93,7 @@ const JobDetails = () => {
         className="px-4 py-2 mb-4 border rounded-md focus:outline-none focus:border-blue-500"
       />
       <div className="grid grid-cols-1 gap-4">
-        {filteredData.map((internship) => (
+        {filteredInternships.map((internship) => (
           <div
             key={internship.id}
             className="bg-white p-4 rounded-lg shadow-lg"

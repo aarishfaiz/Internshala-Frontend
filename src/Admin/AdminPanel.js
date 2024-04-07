@@ -14,14 +14,14 @@ const AdminPanel = () => {
               <IoMail />
                See All Applications
             </Link>
-            {/* <Link to={"/postjobs"}>
+            <Link to={"/postjobs"}>
               <BsBriefcaseFill />
               Post Jobs
             </Link>
             <Link to={"/postinternships"}>
               <FaLocationArrow />
               Post Internships
-            </Link> */}
+            </Link>
           </div>
         </div>
       </div>

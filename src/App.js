@@ -24,6 +24,7 @@ import UserApplicationDetails from "./Components/UserApplications/UserApplicatio
 import UserApplications from './Components/UserApplications/UserApplications'
 import InternshipDetailsAndApply from "./SeeMore/InternshipDetailsAndApply";
 import JobDetails from "./Jobs/JobDetails";
+import PostJob from "./Admin/PostJob";
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
   const user = useSelector(selectUser);
@@ -86,6 +87,7 @@ function App() {
 
 
         <Route path="/postinternships" element={<PostInternship />} />
+        <Route path="/postjobs" element={<PostJob />} />
 
         <Route path="/application" element={<ViewAllApplication />} />
       </Routes>
