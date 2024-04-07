@@ -22,7 +22,7 @@ const JobDetails = () => {
     const fetchInternships = async () => {
       try {
         const response = await axios.get(
-          "https://intern-backend-fop1.onrender.com/api/job"
+          "https://internshala-clone-backend.onrender.com/api/job"
           // "http://localhost:5000/api/job"
         );
         setInternships(response.data); // Assuming response.data is an array of internships
@@ -46,7 +46,7 @@ const JobDetails = () => {
         status: "pending",
       };
       await axios.post(
-        "https://intern-backend-fop1.onrender.com/api/application",
+        "https://internshala-clone-backend.onrender.com/api/application",
         applicationData
       );
 
