@@ -14,7 +14,7 @@ const AdminApplicationDetails = () => {
         try {
           const response = await axios.get(
             // `http://localhost:5000/api/application/${id}`
-             `https://intern-backend-fop1.onrender.com/api/application/${id}`
+             `https://internshala-clone-backend.onrender.com/api/application/${id}`
           );
           setApplication(response.data); // Update to array received from API
         } catch (error) {
@@ -29,7 +29,7 @@ const AdminApplicationDetails = () => {
       try {
         const response = await axios.put(
           //`http://localhost:5000/api/application/${id}`,
-           `https://intern-backend-fop1.onrender.com/api/application/${id}`,
+           `https://internshala-clone-backend.onrender.com/api/application/${id}`,
           { action }
         );
   
