@@ -2,7 +2,7 @@
   "name": "clint",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://intern-backend-fop1.onrender.com",
+  "proxy": "https://internshala-clone-backend.onrender.com",
   "dependencies": {
     "@heroicons/react": "^1.0.6",
     "@reduxjs/toolkit": "^2.2.1",
