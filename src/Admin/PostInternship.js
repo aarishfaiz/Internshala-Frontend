@@ -30,7 +30,7 @@ const PostInternship = () => {
       };
       // Post data to the server
       const response = await axios.post(
-        "https://intern-backend-fop1.onrender.com/api/internship/post",
+        "https://internshala-clone-backend.onrender.com/api/internship/post",
         // "http://localhost:5000/api/internship/post",
         data
       );
